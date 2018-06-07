@@ -22,11 +22,15 @@
                 <div class="num"
                      v-if="data.length > 0 && !current.subtitle"
                      v-bind:class="{ red: isEven, blue: !isEven }">
-                    {{ wordCnt + 1 }}
+                    {{ wordCnt + 1 }} / {{ WordsLength - wordCnt + 1 }}
                 </div>
                 <p class="expression red" v-if="current.subtitle">{{ current.subtitle }} Подраздел</p>
                 <p class="expression" v-if="lang.ru"><b>{{ current.ru }}</b></p>
                 <p class="expression" v-if="lang.en"><b>{{ current.en }}</b></p>
+                <div class="reminder red"
+                     @click="addReminder">
+                    <i class="fa fa-registered" aria-hidden="true"></i> : {{ reminders.length }}
+                </div>
             </div><!-- .jumbotron -->
 
             <div class="flex m_top_10">
@@ -112,6 +116,8 @@
                 pause_enabled: false,
                 pause_on: false,
                 interval: null,
+                reminders: [],
+                reminder_on: true,
             }
         },
         mounted() {
@@ -169,11 +175,27 @@
             startWord: function () {
                 this.wordCnt = 0;
                 this.changeWord();
+                // очистить массив со словами для напоминания
+                this.reminders.length = 0;
             },
             changeWord: function (init = false) {
-                this.current = this.data[this.wordCnt];
-                // save current word to storage
-                localStorage.setItem('current_word_id', this.wordCnt);
+                /**
+                 * каждые 5 слов проверяем есть ли слова в массиве напоминаний.
+                 * если есть, вначале выводим их(удаляя после показа)
+                 * и идем дальше, начиная с того места,
+                 * где остановились до просмотра напоминаний.
+                 */
+                if ((this.wordCnt % 5) == 0 && this.reminders.length > 0 && this.reminder_on) {
+                    this.current = this.reminders[0];
+                    this.removeReminder(0);
+                    this.wordCnt = parseInt(localStorage.getItem('current_word_id'));
+                    this.reminder_on = false;
+                } else {
+                    this.current = this.data[this.wordCnt];
+                    // save current word to storage
+                    localStorage.setItem('current_word_id', this.wordCnt);
+                    this.reminder_on = true
+                }
             },
             changeCat: function (event) {
                 this.reset();
@@ -244,6 +266,14 @@
                 // назначить новый timer
                 this.timer = this.timer_target;
             },
+            addReminder() {
+                if (!_.findWhere(this.reminders, {ru: this.current.ru})) {
+                    this.reminders.push(this.current);
+                }
+            },
+            removeReminder(key) {
+                this.reminders.splice(key, 1);
+            },
         }
 
     }
@@ -311,6 +341,16 @@
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+    }
+
+    .reminder {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 30px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     h1, h2 {
