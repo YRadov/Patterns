@@ -2121,7 +2121,7 @@ let Data = [
     {category: 7, ru: "Мы встречаемся с друзьями по выходным", en: "We meet friends on the weekends "},
     {category: 7, ru: "Она ходит в спортзал после работы", en: "She goes to the gym after work "},
     {category: 7, ru: "Они всегда слушают музыку в метро", en: "They always listen to music in/on ( the) subway"},
-    {category: 7, ru: "После обеда я обычно посуду", en: "I usually wash the dishes after dinner "},
+    {category: 7, ru: "После обеда я обычно мою посуду", en: "I usually wash the dishes after dinner "},
     {category: 7, ru: "Она часто играет в компьютерные игры", en: "She often plays computer games "},
     {category: 7, ru: "Они занимаются спортом 3 раза в неделю", en: "They do sport 3 times a week "},
     {category: 7, ru: "После завтрака мы читаем газеты", en: "We read newspapers after breakfast "},
