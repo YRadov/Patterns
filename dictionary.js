@@ -3112,7 +3112,7 @@ let Data = [
     {category: 7, ru: "Сколько линий метро проходят через ваш город?", en: "How many subway lines run through your city?"},
     {category: 7, ru: "Кто может нам показать дорогу к оперному театру?", en: "Who can show us the way to the opera house?"},
     {category: 7, ru: "Вы покупаете продукты на местном рынке?", en: "Do you buy products at the local market?"},
-    {category: 7, ru: "Они устраивают индивидуальные туры по обзору достопримечательностей?", en: "Do they give individual sightseeingt ours?"},
+    {category: 7, ru: "Они устраивают индивидуальные туры по обзору достопримечательностей?", en: "Do they give individual sightseeing tours?"},
     {category: 7, ru: "В картинной галерее выставлены работы современных художников?", en: "Does the art gallery present modern artists’ works?"},
     {category: 7, ru: "Эта современная выставка привлекает много посетителей?", en: "Does this modern exhibition attract many visitors?"},
     {category: 7, ru: "По выходным цена на билеты поднимается?", en: "Does weekend ticket price go up? "},
