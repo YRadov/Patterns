@@ -3129,8 +3129,7 @@ let Data = [
     {category: 7, ru: "Когда метро открывается и закрывается?", en: "When does the subway open and close?"},
     {category: 7, ru: "Где я могу пополнить баланс мобильного?", en: "Where can I top up my mobile phone? "},
     {category: 7, ru: "Где мне могут починить туфли?", en: "Where can I have my shoes fixed? "},
-    {category: 7, ru: "С какого возраста можно посещать ночные клубы?"},
-    {category: 7, ru: "", en: "From what age can you go to night clubs?"},
+    {category: 7, ru: "С какого возраста можно посещать ночные клубы?", en: "From what age can you go to night clubs?"},
 
     {category: 7, ru: "Present Simple Food", en: "", subtitle: 18},
     {category: 7, ru: "Мы едим яблоки каждый день.", en: "We eat apples every day. "},
