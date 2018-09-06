@@ -3278,7 +3278,7 @@ let Data = [
     {category: 7, ru: "Мы тут по городу катаемся, можем заехать в гости.", en: "We're driving around the town, we can pay you a visit."},
     {category: 7, ru: "Мы пишем песни, чтобы поддержать нашу футбольную команду.", en: "We're writing songs to cheer up our football team."},
     {category: 7, ru: "Бегуны соревнуются за национальный титул.", en: "The runners are competing for the national title."},
-    {category: 7, ru: "Рекордное число спортсменов из", en: "Aфрики принимает участие в этих соревнованиях. A record number of African athletes are participating in the competition."},
+    {category: 7, ru: "Рекордное число спортсменов из Aфрики принимает участие в этих соревнованиях.", en: "A record number of African athletes are participating in the competition."},
     {category: 7, ru: "Моя подруга ходит на кулинарные курсы.", en: "My friend is taking cooking classes. "},
     {category: 7, ru: "Я все еще поддерживаю связь со своим американским другом - мы все еще переписываемся.", en: "I still keep in touch with my American friend - we're still exchanging letters."},
     {category: 7, ru: "Она не занимается сейчас / не тренируется - она просто сидит на диете.", en: "Currently she's not working out, she's just dieting."},
